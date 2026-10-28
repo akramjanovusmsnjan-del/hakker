@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYSTEM FAILURE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <canvas id="glitch"></canvas>
+
+  <div class="scanlines"></div>
+  <div class="screen-noise"></div>
+  <div class="vignette"></div>
+
+  <main id="screen">
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+
+    <div class="top-status">
+      <span class="blink">●</span> TIZIM HOLATI: NOMA'LUМ
+      <span id="systemTime">00:00:00</span>
+    </div>
+
+    <div id="floatingCodes"></div>
+    <div id="glitchLines"></div>
+    <div id="randomShapes"></div>
+
+    <section class="crash-message">
+      <div class="error-label">!!! KRITIK XATO ANIQLANDI !!!</div>
+      <h1 data-text="SYSTEM FAILURE">SYSTEM FAILURE</h1>
+      <div class="subtitle">TIZIM JAVOB BERMAYAPTI</div>
+      <div class="divider"></div>
+
+      <div class="error-code">
+        <span>ERROR_CODE:</span>
+        <strong id="errorCode">0x0000F4A2</strong>
+      </div>
+
+      <div class="error-code">
+        <span>MEMORY_STATUS:</span>
+        <strong class="flicker">CORRUPTED_██</strong>
+      </div>
+
+      <div class="error-code">
+        <span>CONNECTION:</span>
+        <strong id="connection">UNSTABLE</strong>
+      </div>
+
+      <div class="loading-title">TIZIM QAYTA TIKLANMOQDA...</div>
+      <div class="loading-bar">
+        <div id="loadingProgress"></div>
+      </div>
+      <div class="loading-percent" id="loadingPercent">0%</div>
+
+      <div class="warning-text" id="warningText">
+        DIQQAT: MA'LUMOTLAR O'QILMOQDA...
+      </div>
+    </section>
+
+    <div class="side-panel side-left">
+      <div class="side-title">MEMORY DUMP</div>
+      <div id="memoryDump"></div>
+    </div>
+
+    <div class="side-panel side-right">
+      <div class="side-title">SIGNAL ANALYSIS</div>
+      <div id="signalBars"></div>
+      <div class="signal-number" id="signalNumber">98.72%</div>
+      <div class="side-title">PACKET STATUS</div>
+      <div id="packetLog"></div>
+    </div>
+
+    <div class="bottom-log">
+      <span class="blink">></span>
+      <span id="bottomMessage">INITIALIZING SYSTEM...</span>
+      <span class="cursor">_</span>
+    </div>
+
+    <div class="center-crosshair"></div>
+    <div id="flash"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
